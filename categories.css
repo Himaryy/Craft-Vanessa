@@ -64,21 +64,35 @@ body {
   padding: 0;
   width: 100%;
   position: absolute;
-  top: 150px;
+  top: 100px;
 }
 
 #carousel {
   margin: 0 auto;
   padding: 0;
   width: 90%;
-  height: 250px;
-  border: solid;
+  height: 500px;
+  /* border: solid; */
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: opacity 1s ease;
+  object-fit: cover;
+}
+
+.carousel-image.hidden {
+  opacity: 0;
 }
 
 /* Container */
 
 #container-image {
-  margin: 90px 0 0 0;
+  margin: 310px 0 50px 0;
   padding: 0;
   width: 100%;
   display: flex;

@@ -34,35 +34,38 @@
           </div>
         </div>
         <!-- content -->
-        <div id="container-carousel">
-          <div id="co-carousel">
-            <div id="carousel-container">
-              <div id="carousel">
-                <img
-                  src="assets/photo/categories1.jpg"
-                  alt="Image 1"
-                  id="carousel-item"
-                />
-                <img
-                  src="assets/photo/categories2.jpg"
-                  alt="Image 2"
-                  id="carousel-item"
-                />
-                <img
-                  src="assets/photo/categories3.jpg"
-                  alt="Image 3"
-                  id="carousel-item"
-                />
-              </div>
-              <button id="prev" onclick="moveCarousel(-1)">
-                <span class="material-symbols-outlined"> arrow_back_ios </span>
-              </button>
-              <button id="next" onclick="moveCarousel(1)">
-                <span class="material-symbols-outlined">
-                  arrow_forward_ios
-                </span>
-              </button>
+        <div id="bg-carousel">
+          <div class="gallery">
+            <div class="gallery-container">
+              <img
+                src="assets/photo/p1.jpeg"
+                alt=""
+                class="gallery-item gallery-item-1"
+                data-index="1"
+              />
+              <img
+                src="assets/photo/p2.jpeg"
+                alt=""
+                class="gallery-item gallery-item-2"
+                data-index="2"
+              /><img
+                src="assets/photo/p3.jpeg"
+                alt=""
+                class="gallery-item gallery-item-3"
+                data-index="3"
+              /><img
+                src="assets/photo/p4.jpeg"
+                alt=""
+                class="gallery-item gallery-item-4"
+                data-index="4"
+              /><img
+                src="assets/photo/p5.jpeg"
+                alt=""
+                class="gallery-item gallery-item-3"
+                data-index="5"
+              />
             </div>
+            <div class="gallery-controls"></div>
           </div>
         </div>
         <!-- Footer -->
@@ -71,43 +74,6 @@
         </div>
       </div>
     </div>
-    <script>
-      let currentIndex = 0;
-
-      function moveCarousel(direction) {
-        const carousel = document.querySelector("#carousel");
-        const items = document.querySelectorAll("#carousel-item");
-
-        if (direction === 1) {
-          // Geser ke kanan: animasi untuk menggeser ke kanan
-          carousel.style.transition = "transform 0.5s ease-in-out";
-          carousel.style.transform = `translateX(-33.33%)`;
-
-          setTimeout(() => {
-            carousel.style.transition = "none";
-            carousel.appendChild(items[0]);
-            carousel.style.transform = "translateX(0)";
-            items[0].classList.add("fade-in");
-            setTimeout(() => {
-              items[0].classList.remove("fade-in");
-            }, 50);
-          }, 500); // Waktu yang sama dengan durasi transition
-        } else if (direction === -1) {
-          // Geser ke kiri: animasi untuk menggeser ke kiri
-          carousel.style.transition = "none";
-          carousel.insertBefore(items[items.length - 1], items[0]);
-          carousel.style.transform = "translateX(-33.33%)";
-
-          setTimeout(() => {
-            carousel.style.transition = "transform 0.5s ease-in-out";
-            carousel.style.transform = "translateX(0)";
-            items[0].classList.add("fade-in");
-            setTimeout(() => {
-              items[0].classList.remove("fade-in");
-            }, 50);
-          }, 100); // Waktu yang sama dengan durasi transition
-        }
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

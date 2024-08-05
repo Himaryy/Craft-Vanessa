@@ -36,7 +36,31 @@
         <!-- Content -->
         <div id="container-carousel">
           <div id="carousel">
-            <p>asdasd</p>
+            <img
+              src="assets/photo/p1.jpeg"
+              alt="Image 1"
+              class="carousel-image"
+            />
+            <img
+              src="assets/photo/p2.jpeg"
+              alt="Image 2"
+              class="carousel-image hidden"
+            />
+            <img
+              src="assets/photo/p3.jpeg"
+              alt="Image 3"
+              class="carousel-image hidden"
+            />
+            <img
+              src="assets/photo/p4.jpeg"
+              alt="Image 3"
+              class="carousel-image hidden"
+            />
+            <img
+              src="assets/photo/p5.jpeg"
+              alt="Image 3"
+              class="carousel-image hidden"
+            />
           </div>
         </div>
         <!-- Image 3  -->
@@ -74,5 +98,18 @@
         </div>
       </div>
     </div>
+    <script>
+      let currentIndex = 0;
+      const images = document.querySelectorAll(".carousel-image");
+      const totalImages = images.length;
+
+      function showNextImage() {
+        images[currentIndex].classList.add("hidden");
+        currentIndex = (currentIndex + 1) % totalImages;
+        images[currentIndex].classList.remove("hidden");
+      }
+
+      setInterval(showNextImage, 3000); // Change image every 3 seconds
+    </script>
   </body>
 </html>
