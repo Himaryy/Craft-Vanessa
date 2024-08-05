@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link -->
+    <link rel="stylesheet" href="product.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Product</title>
+  </head>
+  <body>
+    <div id="background">
+      <div id="co-background">
+        <!-- Header -->
+        <div id="header">
+          <div id="img-brush-atas">
+            <img src="assets/icon/brushatas.svg" alt="Brush Atas" />
+          </div>
+          <div id="container-logo">
+            <div id="back-button">
+              <a href="index.html">
+                <span class="material-symbols-outlined">
+                  arrow_circle_left
+                </span></a
+              >
+            </div>
+            <img src="assets/icon/logo.svg" alt="Logo" id="logo" />
+            <div id="navigasi">
+              <p id="text-navigasi">Product</p>
+            </div>
+          </div>
+        </div>
+        <!-- content -->
+        <div id="container-carousel">
+          <div id="co-carousel">
+            <div id="carousel-container">
+              <div id="carousel">
+                <img
+                  src="assets/photo/categories1.jpg"
+                  alt="Image 1"
+                  id="carousel-item"
+                />
+                <img
+                  src="assets/photo/categories2.jpg"
+                  alt="Image 2"
+                  id="carousel-item"
+                />
+                <img
+                  src="assets/photo/categories3.jpg"
+                  alt="Image 3"
+                  id="carousel-item"
+                />
+              </div>
+              <button id="prev" onclick="moveCarousel(-1)">
+                <span class="material-symbols-outlined"> arrow_back_ios </span>
+              </button>
+              <button id="next" onclick="moveCarousel(1)">
+                <span class="material-symbols-outlined">
+                  arrow_forward_ios
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Footer -->
+        <div id="img-brush-bawah">
+          <img src="assets/icon/brushbawah.svg" alt="Brush Bawah" />
+        </div>
+      </div>
+    </div>
+    <script>
+      let currentIndex = 0;
+
+      function moveCarousel(direction) {
+        const carousel = document.querySelector("#carousel");
+        const items = document.querySelectorAll("#carousel-item");
+
+        if (direction === 1) {
+          // Geser ke kanan: animasi untuk menggeser ke kanan
+          carousel.style.transition = "transform 0.5s ease-in-out";
+          carousel.style.transform = `translateX(-33.33%)`;
+
+          setTimeout(() => {
+            carousel.style.transition = "none";
+            carousel.appendChild(items[0]);
+            carousel.style.transform = "translateX(0)";
+            items[0].classList.add("fade-in");
+            setTimeout(() => {
+              items[0].classList.remove("fade-in");
+            }, 50);
+          }, 500); // Waktu yang sama dengan durasi transition
+        } else if (direction === -1) {
+          // Geser ke kiri: animasi untuk menggeser ke kiri
+          carousel.style.transition = "none";
+          carousel.insertBefore(items[items.length - 1], items[0]);
+          carousel.style.transform = "translateX(-33.33%)";
+
+          setTimeout(() => {
+            carousel.style.transition = "transform 0.5s ease-in-out";
+            carousel.style.transform = "translateX(0)";
+            items[0].classList.add("fade-in");
+            setTimeout(() => {
+              items[0].classList.remove("fade-in");
+            }, 50);
+          }, 100); // Waktu yang sama dengan durasi transition
+        }
+      }
+    </script>
+  </body>
+</html>

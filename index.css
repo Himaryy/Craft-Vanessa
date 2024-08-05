@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  font-family: "Poppins", sans-serif;
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
+body {
+  background-color: #fff6ea;
+}
+
+#backgroud {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+#co-background {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+/* Navbar */
+#navbar {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  /* gap: 50px; */
+}
+
+#header-logo {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 30px;
+}
+
+#logo {
+  width: 60px;
+  height: 60px;
+}
+
+#brand {
+  font-size: 40px;
+}
+
+#header-login {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 300px;
+}
+
+#header-login .material-symbols-outlined {
+  font-size: 50px;
+}
+
+#login {
+  font-size: 20px;
+}
+
+#header-button ul {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+
+#header-button ul li {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  display: inline;
+  cursor: pointer;
+}
+
+#header-button ul li a {
+  text-decoration: none;
+  color: #000;
+  /* font-weight: bold; */
+  /* padding: 10px 20px;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+    font-family: "Raspberie", serif; */
+}
+
+/* Content */
+#content {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+#co-content {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  display: flex;
+}
+
+#icon-sosial-media {
+  width: 15%;
+  padding: 0;
+  margin: 50px 0;
+}
+
+#icon-kiri-ig {
+  width: 40px;
+  height: 40px;
+  padding: 10px 30px;
+}
+
+#icon-kiri-yt {
+  width: 40px;
+  height: 40px;
+  padding: 10px 30px;
+}
+#icon-kiri-x {
+  width: 40px;
+  height: 40px;
+  padding: 10px 30px;
+}
+#icon-kiri-wa {
+  width: 40px;
+  height: 40px;
+  padding: 10px 30px;
+}
+#icon-kiri-fb {
+  width: 20px;
+  height: 20px;
+  padding: 10px 40px;
+}
+
+#icon-kiri #icon-fb {
+  width: 40px;
+  height: 40px;
+}
+
+/* Image Beranda */
+#kotak-beranda {
+  margin: 50px 0;
+  padding: 0;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container-beranda {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+#image-lingkaran-1 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -50px;
+}
+
+#container-gambar {
+}
+
+#gambar-barang {
+  width: 50%;
+  height: 350px;
+  /* border: solid #000; */
+  box-shadow: 0 8px 8px rgba(94, 94, 94, 0.8);
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  /* border-radius: 8px; */
+  z-index: 2;
+  margin-left: 50px;
+}
+
+#text-order {
+  width: 140px;
+  height: 100px;
+  padding-left: 90px;
+}
+
+#beranda-1 {
+  box-shadow: 0 8px 8px rgb(0, 0, 0);
+}
+
+#image-lingkaran-2 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: -30px;
+  right: 120px;
+}
+
+#bubble-1 {
+  position: absolute;
+  z-index: 1;
+  width: 180px;
+  height: 180px;
+  top: -30px;
+  right: -50px;
+}
+
+/* Rating */
+
+#order-now {
+  width: 45%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#img-order {
+  width: 250px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 70px;
+  z-index: 3;
+}
+
+#rate {
+  width: 300px;
+  position: absolute;
+  top: 120px;
+  left: 60px;
+  z-index: 2;
+}
+
+#assets1 {
+  width: 120px;
+  position: absolute;
+  bottom: -70px;
+  right: 70px;
+  z-index: 1;
+}
+
+#kayu {
+  width: 140px;
+  position: absolute;
+  bottom: -70px;
+  right: 70px;
+  z-index: 1;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* footer */
+
+#bg-container {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+}
+
+#container {
+  width: 100%;
+  position: relative;
+  /* height: auto; */
+}
+
+#brush2 img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: -180px;
+  z-index: -1;
+}
+
+#content-text {
+  position: relative;
+  width: 450px;
+  /* max-width: 1200px; */
+  margin: -100px 150px; /* Pindahkan ke atas untuk meng-overlay gelombang */
+  padding: 0 20px;
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  text-align: center;
+  color: #654321; /* Sesuaikan dengan warna teks */
+  z-index: 3;
+}
+
+#stat {
+  /* flex: 1; */
+  padding: 80px 20px 0 20px;
+}
+
+#stat h2 {
+  font-size: 40px;
+  margin: 0;
+}
+
+#stat p {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Slide Baru */
+#container-slide2 {
+  width: 100%;
+  padding: 0;
+  margin: 110px 0 0 0;
+}
+
+#container-slide3 {
+  width: 100%;
+  padding: 0;
+  margin: -10px 0 0 0;
+}
+
+#container-slide4 {
+  width: 100%;
+  padding: 0;
+  margin: -10px 0 0 0;
+}
+
+#img-brush-atas {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+#img-brush-bawah {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+#content-yt {
+  text-align: center;
+  position: relative;
+}
+
+#content-yt #img-yt {
+  width: 50%;
+  height: auto;
+}
+
+#content-fb {
+  text-align: center;
+  position: relative;
+}
+
+#content-fb #img-fb {
+  width: 30%;
+  height: auto;
+}
+
+#content-x {
+  text-align: center;
+  position: relative;
+}
+
+#content-x #img-x {
+  width: 40%;
+  height: auto;
+}
